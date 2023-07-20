@@ -1,0 +1,145 @@
+@import "./breakpoints.scss";
+
+$purple: hsl(259, 100%, 65%);
+$red: hsl(0, 100%, 67%);
+$white: hsl(0, 0%, 100%);
+$offWhite: hsl(0, 0%, 94%);
+$lightGrey: hsl(0, 0%, 86%);
+$smokeGrey: hsl(0, 1%, 44%);
+$offBlack: hsl(0, 0%, 8%);
+
+@font-face{
+    font-family: 'Poppins';
+    src: url('Poppins-Italic.ttf');
+}
+@font-face{
+    font-family: 'PoppinsBold';
+    src: url('Poppins-Bold.ttf');
+}
+@font-face{
+    font-family: 'PoppinsExtraBold';
+    src: url('Poppins-ExtraBold.ttf');
+}
+@font-face{
+    font-family: 'PoppinsItalic';
+    src: url('Poppins-ExtraBoldItalic.ttf');
+}
+@mixin inputDate{
+    color: $smokeGrey;
+    font-family: 'PoppinsBold';
+    font-size: .9em;
+    letter-spacing: 0.2em;
+
+    width: 22%;
+    height: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 4%;
+    input[type=number]{
+        font-size: 2em;
+        font-family: 'PoppinsBold';
+        aspect-ratio: 9 / 4;
+        width: 100%;
+        border: 1px solid $lightGrey;
+        caret-color: $purple;
+        border-radius: 4px;
+        padding-left: 0.5em;
+        margin-top: 0.1em;
+        margin-bottom: 0.1em;
+        &:focus{
+            border: 1px solid $purple;
+            outline: none;
+        }
+        &::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        &::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+    }
+    span{
+        color: $red;
+        font-family: 'Poppins';
+        font-size: .8em;
+        letter-spacing: 0;
+    }
+}
+
+html {
+    background-color: $offWhite;
+    box-sizing: border-box;
+    font-size: 1.25vw;
+    font-family: 'PoppinsExtraBold';
+    padding: 0;
+    margin: 0;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+.calculator {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+
+    background-color: $white;
+
+    aspect-ratio: 84 / 65;
+    width: calc(700vw/12);
+    border-radius: 4% 4% 20% 4% / 5% 5% 25% 5%;
+    padding: 3%;
+
+
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    overflow: hidden; 
+    .dayCalc{
+        @include inputDate();
+    }    
+    .monthCalc{
+        @include inputDate();
+    }
+    .yearCalc{
+        @include inputDate();
+    }
+    .divider{
+        margin-top: 6%;
+        width: 85%;
+        height: 1px;
+    }
+    button{
+        border: 0;
+        margin: 0;
+        aspect-ratio: 1/1;
+        width: 15%;
+        border-radius: 50%;
+        background-color: $purple;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &:hover{
+            background-color: $offBlack;
+        }
+    }
+    .displayAge{
+        color: $offBlack;
+        font-size: 5.25em;
+        font-family: 'PoppinsItalic';
+        line-height: 102%;
+        p{
+            margin: 0;
+            span{
+                color: $purple;
+            }
+        }
+    }
+    @include mobile{
+        width: 343px;
+    }
+
+}

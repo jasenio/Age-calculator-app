@@ -1,0 +1,236 @@
+@font-face {
+  font-family: "Poppins";
+  src: url("./assets/fonts/Poppins-Italic.ttf");
+}
+@font-face {
+  font-family: "PoppinsBold";
+  src: url("./assets/fonts/Poppins-Bold.ttf");
+}
+@font-face {
+  font-family: "PoppinsExtraBold";
+  src: url("./assets/fonts/Poppins-ExtraBold.ttf");
+}
+@font-face {
+  font-family: "PoppinsItalic";
+  src: url("./assets/fonts/Poppins-ExtraBoldItalic.ttf");
+}
+html {
+  background-color: hsl(0, 0%, 94%);
+  box-sizing: border-box;
+  font-size: max(1.25vw, 7px);
+  font-family: "PoppinsExtraBold";
+  padding: 0;
+  margin: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.calculator {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: hsl(0, 0%, 100%);
+  aspect-ratio: 84/65;
+  width: 58.3333333333vw;
+  min-width: 420px;
+  border-radius: 35px 35px 150px 35px;
+  padding: 3%;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  overflow: hidden;
+}
+.calculator .dayCalc {
+  color: hsl(0, 1%, 44%);
+  font-family: "PoppinsBold";
+  font-size: 0.9em;
+  letter-spacing: 0.2em;
+  width: 22%;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: 4%;
+}
+.calculator .dayCalc input[type=number] {
+  font-size: 2em;
+  font-family: "PoppinsBold";
+  aspect-ratio: 9/4;
+  width: 100%;
+  border: 1px solid hsl(0, 0%, 86%);
+  caret-color: hsl(259, 100%, 65%);
+  border-radius: 4px;
+  padding-left: 0.5em;
+  margin-top: 0.1em;
+  margin-bottom: 0.1em;
+}
+.calculator .dayCalc input[type=number]:focus {
+  border: 1px solid hsl(259, 100%, 65%);
+  outline: none;
+}
+.calculator .dayCalc input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.calculator .dayCalc input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.calculator .dayCalc span {
+  color: hsl(0, 100%, 67%);
+  font-family: "Poppins";
+  font-size: 0.8em;
+  letter-spacing: 0;
+}
+.calculator .monthCalc {
+  color: hsl(0, 1%, 44%);
+  font-family: "PoppinsBold";
+  font-size: 0.9em;
+  letter-spacing: 0.2em;
+  width: 22%;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: 4%;
+}
+.calculator .monthCalc input[type=number] {
+  font-size: 2em;
+  font-family: "PoppinsBold";
+  aspect-ratio: 9/4;
+  width: 100%;
+  border: 1px solid hsl(0, 0%, 86%);
+  caret-color: hsl(259, 100%, 65%);
+  border-radius: 4px;
+  padding-left: 0.5em;
+  margin-top: 0.1em;
+  margin-bottom: 0.1em;
+}
+.calculator .monthCalc input[type=number]:focus {
+  border: 1px solid hsl(259, 100%, 65%);
+  outline: none;
+}
+.calculator .monthCalc input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.calculator .monthCalc input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.calculator .monthCalc span {
+  color: hsl(0, 100%, 67%);
+  font-family: "Poppins";
+  font-size: 0.8em;
+  letter-spacing: 0;
+}
+.calculator .yearCalc {
+  color: hsl(0, 1%, 44%);
+  font-family: "PoppinsBold";
+  font-size: 0.9em;
+  letter-spacing: 0.2em;
+  width: 22%;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: 4%;
+}
+.calculator .yearCalc input[type=number] {
+  font-size: 2em;
+  font-family: "PoppinsBold";
+  aspect-ratio: 9/4;
+  width: 100%;
+  border: 1px solid hsl(0, 0%, 86%);
+  caret-color: hsl(259, 100%, 65%);
+  border-radius: 4px;
+  padding-left: 0.5em;
+  margin-top: 0.1em;
+  margin-bottom: 0.1em;
+}
+.calculator .yearCalc input[type=number]:focus {
+  border: 1px solid hsl(259, 100%, 65%);
+  outline: none;
+}
+.calculator .yearCalc input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.calculator .yearCalc input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.calculator .yearCalc span {
+  color: hsl(0, 100%, 67%);
+  font-family: "Poppins";
+  font-size: 0.8em;
+  letter-spacing: 0;
+}
+.calculator .divider {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.calculator .divider .leftBorder {
+  width: 85%;
+  height: 1px;
+}
+@media (max-width: 375px) {
+  .calculator .divider .leftBorder {
+    width: 42.5%;
+    height: 1px;
+  }
+}
+.calculator .divider button {
+  border: 0;
+  margin: 0;
+  aspect-ratio: 1/1;
+  width: 15%;
+  border-radius: 50%;
+  background-color: hsl(259, 100%, 65%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.calculator .divider button:hover {
+  background-color: hsl(0, 0%, 8%);
+}
+.calculator .divider button svg {
+  aspect-ratio: 46/44;
+  width: 60%;
+}
+.calculator .divider .rightBorder {
+  width: 0%;
+  height: 0%;
+}
+@media (max-width: 375px) {
+  .calculator .divider .rightBorder {
+    width: 42.5%;
+    height: 1px;
+  }
+}
+.calculator .displayAge {
+  color: hsl(0, 0%, 8%);
+  font-size: 5.25em;
+  font-family: "PoppinsItalic";
+  line-height: 102%;
+}
+.calculator .displayAge p {
+  margin: 0;
+}
+.calculator .displayAge p span {
+  color: hsl(259, 100%, 65%);
+}
+@media (max-width: 375px) {
+  .calculator {
+    aspect-ratio: 343/486;
+    width: 80vw;
+    min-width: 250px;
+    border-radius: 20px 20px 100px 20px;
+    justify-content: space-between;
+    align-content: space-around;
+  }
+}/*# sourceMappingURL=style.css.map */
